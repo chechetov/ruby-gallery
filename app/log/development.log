@@ -972,3 +972,38 @@ ActionController::RoutingError (No route matches [GET] "/img/img3.jpeg"):
   
 ActionController::RoutingError (No route matches [GET] "/img/img4.jpeg"):
   
+Started GET "/upload" for 127.0.0.1 at 2022-02-15 01:11:22 +0200
+Processing by ImagesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1489)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1577)
+Completed 500 Internal Server Error in 11ms (Allocations: 4483)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Upload Image</h2>
+    2: 
+    3: <%= form_for @image, :html => {:multipart => true} do |f| %>
+    4: <!-- Check for errors -->
+    5: <% if @image.errors.any? %>
+    6: 	<% @image.errors.full_messages.each do |msg| %>
+  
+app/views/images/new.html.erb:3
+Started GET "/img/img1.jpeg" for 127.0.0.1 at 2022-02-15 01:11:22 +0200
+Started GET "/img/img2.jpeg" for 127.0.0.1 at 2022-02-15 01:11:22 +0200
+Started GET "/img/img3.jpeg" for 127.0.0.1 at 2022-02-15 01:11:22 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/img1.jpeg"):
+  
+Started GET "/img/img4.jpeg" for 127.0.0.1 at 2022-02-15 01:11:22 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/img2.jpeg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/img3.jpeg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/img4.jpeg"):
+  
