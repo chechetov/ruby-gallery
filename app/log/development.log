@@ -494,3 +494,59 @@ ActionController::RoutingError (No route matches [GET] "/img/img1.jpeg"):
   
 ActionController::RoutingError (No route matches [GET] "/img/img3.jpeg"):
   
+Started GET "/" for 127.0.0.1 at 2022-02-14 20:59:03 +0200
+Processing by ImagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/index.html.erb within layouts/application
+  Rendered images/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 676)
+  Rendered layout layouts/application.html.erb (Duration: 337.5ms | Allocations: 21936)
+Completed 500 Internal Server Error in 341ms (Allocations: 23080)
+
+
+  
+ActionView::Template::Error (Error: property "margin-top" must be followed by a ':'
+        on line 26:2 of app/assets/stylesheets/main.css.scss
+        from line 18:9 of app/assets/stylesheets/application.css.scss
+>> 	margin-top 3px;
+
+   -^
+):
+     5:     <meta name="viewport" content="width=device-width,initial-scale=1">
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+     9:     <%= javascript_importmap_tags %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/main.css.scss:26
+app/views/layouts/application.html.erb:8
+Started GET "/" for 127.0.0.1 at 2022-02-14 20:59:28 +0200
+Processing by ImagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/index.html.erb within layouts/application
+  Rendered images/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 15)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/layouts/application.html.erb:28
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:28
+  Rendered layout layouts/application.html.erb (Duration: 2762.9ms | Allocations: 53034)
+Completed 200 OK in 2764ms (Views: 2763.6ms | ActiveRecord: 0.6ms | Allocations: 53400)
+
+
+Started GET "/img/img1.jpeg" for 127.0.0.1 at 2022-02-14 20:59:31 +0200
+Started GET "/img/img2.jpeg" for 127.0.0.1 at 2022-02-14 20:59:31 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/img1.jpeg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/img2.jpeg"):
+  
+Started GET "/img/img3.jpeg" for 127.0.0.1 at 2022-02-14 20:59:31 +0200
+Started GET "/img/img4.jpeg" for 127.0.0.1 at 2022-02-14 20:59:31 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/img3.jpeg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/img4.jpeg"):
+  
