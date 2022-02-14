@@ -1007,3 +1007,51 @@ ActionController::RoutingError (No route matches [GET] "/img/img3.jpeg"):
   
 ActionController::RoutingError (No route matches [GET] "/img/img4.jpeg"):
   
+Started GET "/upload" for 127.0.0.1 at 2022-02-15 01:15:26 +0200
+  
+SyntaxError (/Users/me/Documents/ruby/gallery/app/app/controllers/images_controller.rb:21: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/images_controller.rb:21: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/images_controller.rb:21: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/images_controller.rb:21: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/upload" for 127.0.0.1 at 2022-02-15 01:15:44 +0200
+Processing by ImagesController#new as HTML
+Completed 500 Internal Server Error in 5ms (Allocations: 2547)
+
+
+  
+SyntaxError (/Users/me/Documents/ruby/gallery/app/app/models/image.rb:2: syntax error, unexpected ':', expecting `end'
+	belongs_to: category
+	          ^
+):
+  
+app/models/image.rb:2: syntax error, unexpected ':', expecting `end'
+app/models/image.rb:2: syntax error, unexpected ':', expecting `end'
+app/models/image.rb:2: syntax error, unexpected ':', expecting `end'
+app/controllers/images_controller.rb:3:in `new'
+Started GET "/upload" for 127.0.0.1 at 2022-02-15 01:16:04 +0200
+Processing by ImagesController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/images_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering images/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/images/new.html.erb:21:in `collect'
+  Rendered images/new.html.erb within layouts/application (Duration: 26.6ms | Allocations: 7351)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 7448)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 1.3ms | Allocations: 17805)
+
+
+  
+ActionView::Template::Error (undefined method `remote_image_url' for #<Image id: nil, image: nil, image_title: nil, image_file_size: nil, image_content_type: nil, image_description: nil, category_id: nil, created_at: nil, updated_at: nil>
+Did you mean?  remove_instance_variable):
+    33: 
+    34: <div class="form-group">
+    35: 	 <%= f.label :remote_image_url, 'or image url' %>
+    36: 	 <%= f.text_field :remote_image_url, class: 'form-control'%>
+    37: </div>
+    38: <br>
+    39: 
+  
+app/views/images/new.html.erb:36
+app/views/images/new.html.erb:3
