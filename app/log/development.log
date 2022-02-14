@@ -1055,3 +1055,192 @@ Did you mean?  remove_instance_variable):
   
 app/views/images/new.html.erb:36
 app/views/images/new.html.erb:3
+Started GET "/upload" for 127.0.0.1 at 2022-02-15 01:19:31 +0200
+Processing by ImagesController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/images_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering images/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/images/new.html.erb:21:in `collect'
+  Rendered images/new.html.erb within layouts/application (Duration: 27.7ms | Allocations: 7112)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 7200)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.9ms | Allocations: 14341)
+
+
+  
+ActionView::Template::Error (undefined method `remote_image_url' for #<Image id: nil, image: nil, image_title: nil, image_file_size: nil, image_content_type: nil, image_description: nil, category_id: nil, created_at: nil, updated_at: nil>
+Did you mean?  remove_instance_variable):
+    33: 
+    34: <!-- <div class="form-group">
+    35: 	 <%= f.label :remote_image_url, 'or image url' %>
+    36: 	 <%= f.text_field :remote_image_url, class: 'form-control'%>
+    37: </div>
+    38: <br> -->
+    39: 
+  
+app/views/images/new.html.erb:36
+app/views/images/new.html.erb:3
+Started GET "/upload" for 127.0.0.1 at 2022-02-15 01:19:56 +0200
+Processing by ImagesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/images/new.html.erb:21:in `collect'
+  Rendered images/new.html.erb within layouts/application (Duration: 18.8ms | Allocations: 5788)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 5876)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.2ms | Allocations: 7029)
+
+
+  
+ActionView::Template::Error (undefined method `remote_image_url' for #<Image id: nil, image: nil, image_title: nil, image_file_size: nil, image_content_type: nil, image_description: nil, category_id: nil, created_at: nil, updated_at: nil>
+Did you mean?  remove_instance_variable):
+    33: 
+    34: <!-- <div class="form-group">
+    35: #	 <%= f.label :remote_image_url, 'or image url' %>
+    36: #	 <%= f.text_field :remote_image_url, class: 'form-control'%>
+    37: </div>
+    38: <br> -->
+    39: 
+  
+app/views/images/new.html.erb:36
+app/views/images/new.html.erb:3
+Started GET "/upload" for 127.0.0.1 at 2022-02-15 01:21:52 +0200
+Processing by ImagesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1448)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1537)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2705)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Upload Image</h2>
+
+<%= form_for @image, :html => {:multipart => true} do |f| %>
+<!-- Check for errors -->
+<% if @image.errors.any? %>
+	<% @image.errors.full_messages.each do |msg| %>
+	<!-- Show errors -->
+	<div class="alert alert-danger">
+		<%= msg %>
+	</div>
+	<% end %>
+<% end %>
+
+<div class="form-group">
+	<%= f.label :image_title %>
+	<%= f.text_field :image_title, class:'form-control' %>
+</div>
+
+<div class="form-group">
+	<%= f.label :category %>
+	<%= f.select :category_id, Category.all.collect {|x| [x.name, x.id]}, {:include_blank => 'Select One'},class:'form-control' %>
+</div>
+
+<div class="form-group">
+	<%= f.label :image_description %>
+	<%= f.text_area :image_description, class:'form-control' %>
+</div>
+
+<div class="form-group">
+	<%= f.label :image %>
+	<%= f.file_field :image %>	
+</div>
+
+<!-- <div class="form-group">
+	 <%=# f.label :remote_image_url, 'or image url' %>
+	 <%=# f.text_field :remote_image_url, class: 'form-control'%>
+</div>
+<br> -->
+
+<%= f.submit "Submit", class:'btn btn-primary' %>
+<%= link_to "Cancel", images_path, class:'btn btn-default' %>
+<% end %>
+):
+1:    <h2>Upload Image</h2>
+2:    
+3:    <%= form_for @image, :html => {:multipart => true} do |f| %>
+4:    <!-- Check for errors -->
+5:    <% if @image.errors.any? %>
+6:    	<% @image.errors.full_messages.each do |msg| %>
+7:    	<!-- Show errors -->
+8:    	<div class="alert alert-danger">
+9:    		<%= msg %>
+10:    	</div>
+11:    	<% end %>
+12:    <% end %>
+13:    
+14:    <div class="form-group">
+15:    	<%= f.label :image_title %>
+16:    	<%= f.text_field :image_title, class:'form-control' %>
+17:    </div>
+18:    
+19:    <div class="form-group">
+20:    	<%= f.label :category %>
+21:    	<%= f.select :category_id, Category.all.collect {|x| [x.name, x.id]}, {:include_blank => 'Select One'},class:'form-control' %>
+22:    </div>
+23:    
+24:    <div class="form-group">
+25:    	<%= f.label :image_description %>
+26:    	<%= f.text_area :image_description, class:'form-control' %>
+27:    </div>
+28:    
+29:    <div class="form-group">
+30:    	<%= f.label :image %>
+31:    	<%= f.file_field :image %>	
+32:    </div>
+33:    
+34:    <!-- <div class="form-group">
+35:    	 <%=# f.label :remote_image_url, 'or image url' %>
+36:    	 <%=# f.text_field :remote_image_url, class: 'form-control'%>
+37:    </div>
+38:    <br> -->
+39:    
+40:    <%= f.submit "Submit", class:'btn btn-primary' %>
+41:    <%= link_to "Cancel", images_path, class:'btn btn-default' %>
+42:    <% end %>
+  
+app/views/images/new.html.erb:36: syntax error, unexpected local variable or method, expecting ')'
+app/views/images/new.html.erb:36: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/images/new.html.erb:37: syntax error, unexpected '<', expecting ')'
+app/views/images/new.html.erb:44: unterminated regexp meets end of file
+app/views/images/new.html.erb:44: syntax error, unexpected end-of-input, expecting ')'
+app/views/images/new.html.erb:36: syntax error, unexpected local variable or method, expecting ')'
+app/views/images/new.html.erb:36: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/images/new.html.erb:37: syntax error, unexpected '<', expecting ')'
+app/views/images/new.html.erb:44: unterminated regexp meets end of file
+app/views/images/new.html.erb:44: syntax error, unexpected end-of-input, expecting ')'
+app/views/images/new.html.erb:36: syntax error, unexpected local variable or method, expecting ')'
+app/views/images/new.html.erb:36: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/images/new.html.erb:37: syntax error, unexpected '<', expecting ')'
+app/views/images/new.html.erb:44: unterminated regexp meets end of file
+app/views/images/new.html.erb:44: syntax error, unexpected end-of-input, expecting ')'
+app/views/images/new.html.erb:36: syntax error, unexpected local variable or method, expecting ')'
+app/views/images/new.html.erb:36: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/images/new.html.erb:37: syntax error, unexpected '<', expecting ')'
+app/views/images/new.html.erb:44: unterminated regexp meets end of file
+app/views/images/new.html.erb:44: syntax error, unexpected end-of-input, expecting ')'
+app/views/images/new.html.erb:36: syntax error, unexpected local variable or method, expecting ')'
+app/views/images/new.html.erb:36: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/images/new.html.erb:37: syntax error, unexpected '<', expecting ')'
+app/views/images/new.html.erb:44: unterminated regexp meets end of file
+app/views/images/new.html.erb:44: syntax error, unexpected end-of-input, expecting ')'
+app/views/images/new.html.erb:36: syntax error, unexpected local variable or method, expecting ')'
+app/views/images/new.html.erb:36: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/images/new.html.erb:37: syntax error, unexpected '<', expecting ')'
+app/views/images/new.html.erb:44: unterminated regexp meets end of file
+app/views/images/new.html.erb:44: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/upload" for 127.0.0.1 at 2022-02-15 01:23:01 +0200
+Processing by ImagesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/images/new.html.erb:21:in `collect'
+  Rendered images/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2764)
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:28
+  Rendered layout layouts/application.html.erb (Duration: 52.5ms | Allocations: 21793)
+Completed 200 OK in 59ms (Views: 55.3ms | ActiveRecord: 0.2ms | Allocations: 22991)
+
+
