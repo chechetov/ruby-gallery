@@ -550,3 +550,425 @@ ActionController::RoutingError (No route matches [GET] "/img/img3.jpeg"):
   
 ActionController::RoutingError (No route matches [GET] "/img/img4.jpeg"):
   
+Started GET "/upload" for 127.0.0.1 at 2022-02-14 21:04:08 +0200
+Processing by ImagesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/new.html.erb within layouts/application
+  Rendered images/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 123)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:28
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 7023)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.1ms | Allocations: 7424)
+
+
+Started GET "/img/img1.jpeg" for 127.0.0.1 at 2022-02-14 21:04:08 +0200
+Started GET "/img/img3.jpeg" for 127.0.0.1 at 2022-02-14 21:04:08 +0200
+Started GET "/img/img4.jpeg" for 127.0.0.1 at 2022-02-14 21:04:08 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/img1.jpeg"):
+  
+Started GET "/img/img2.jpeg" for 127.0.0.1 at 2022-02-14 21:04:08 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/img3.jpeg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/img4.jpeg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/img2.jpeg"):
+  
+Started GET "/categories/new" for 127.0.0.1 at 2022-02-14 21:04:09 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 149)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:28
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 7432)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.2ms | Allocations: 8478)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-02-14 21:11:07 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1359)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1447)
+Completed 500 Internal Server Error in 8ms (Allocations: 2615)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2> Add New Category </h2>
+    2: 
+    3: <%= form_for @category do |f| %>
+    4: 	<!-- check for errors -->
+    5: 	<% if @category.errors.any? %>
+    6: 		<% @category.errors.any? %>
+  
+app/views/categories/new.html.erb:3
+Started GET "/categories/new" for 127.0.0.1 at 2022-02-14 21:12:11 +0200
+Processing by CategoriesController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/categories_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 946)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1034)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms | Allocations: 5166)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2> Add New Category </h2>
+    2: 
+    3: <%= form_for @category do |f| %>
+    4: 	<!-- check for errors -->
+    5: 	<% if @category.errors.any? %>
+    6: 		<% @category.errors.any? %>
+  
+app/views/categories/new.html.erb:3
+Started GET "/categories/new" for 127.0.0.1 at 2022-02-14 21:12:46 +0200
+Processing by CategoriesController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/categories_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 946)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1034)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.9ms | Allocations: 5511)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2> Add New Category </h2>
+    2: 
+    3: <%= form_for @category do |f| %>
+    4: 	<!-- check for errors -->
+    5: 	<% if @category.errors.any? %>
+    6: 		<% @category.errors.any? %>
+  
+app/views/categories/new.html.erb:3
+Started GET "/categories/new" for 127.0.0.1 at 2022-02-14 21:12:59 +0200
+Processing by CategoriesController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/categories_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 22.8ms | Allocations: 4220)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:28
+  Rendered layout layouts/application.html.erb (Duration: 63.2ms | Allocations: 23430)
+Completed 200 OK in 80ms (Views: 64.3ms | ActiveRecord: 1.4ms | Allocations: 27940)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-02-14 21:14:30 +0200
+Processing by CategoriesController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/categories_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 858)
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:28
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 19435)
+Completed 200 OK in 42ms (Views: 32.7ms | ActiveRecord: 1.9ms | Allocations: 23870)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-02-14 21:14:42 +0200
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Category Four"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 3687)
+
+
+  
+NameError (undefined local variable or method `category_params' for #<CategoriesController:0x00000000042f90>
+Did you mean?  category_path):
+  
+app/controllers/categories_controller.rb:7:in `create'
+Started GET "/categories/new" for 127.0.0.1 at 2022-02-14 21:15:51 +0200
+  
+SyntaxError (/Users/me/Documents/ruby/gallery/app/app/controllers/categories_controller.rb:33: syntax error, unexpected '(', expecting `end'
+...ms.require(:category).permit()(:name)
+...                              ^
+):
+  
+app/controllers/categories_controller.rb:33: syntax error, unexpected '(', expecting `end'
+app/controllers/categories_controller.rb:33: syntax error, unexpected '(', expecting `end'
+app/controllers/categories_controller.rb:33: syntax error, unexpected '(', expecting `end'
+Started GET "/categories/new" for 127.0.0.1 at 2022-02-14 21:16:19 +0200
+Processing by CategoriesController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/categories_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 861)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:28
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 19526)
+Completed 200 OK in 39ms (Views: 29.1ms | ActiveRecord: 1.7ms | Allocations: 24031)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-02-14 21:16:23 +0200
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Category Four"}, "commit"=>"Submit"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:9:in `create'
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Category Four"], ["created_at", "2022-02-14 19:16:23.832037"], ["updated_at", "2022-02-14 19:16:23.832037"]]
+  ↳ app/controllers/categories_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/categories
+Completed 302 Found in 10ms (ActiveRecord: 2.6ms | Allocations: 3557)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-02-14 21:16:23 +0200
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for CategoriesController):
+  
+actionpack (7.0.2.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.2.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.2.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/categories/new" for 127.0.0.1 at 2022-02-14 21:16:23 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 623)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:28
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 7353)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.1ms | Allocations: 7720)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-02-14 21:16:26 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 600)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:28
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 7321)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.1ms | Allocations: 7673)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-02-14 21:16:42 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 594)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:28
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 7308)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.1ms | Allocations: 7661)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-02-14 21:16:47 +0200
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"test"}, "commit"=>"Submit"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:9:in `create'
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test"], ["created_at", "2022-02-14 19:16:47.121105"], ["updated_at", "2022-02-14 19:16:47.121105"]]
+  ↳ app/controllers/categories_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/categories
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms | Allocations: 2259)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-02-14 21:16:47 +0200
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for CategoriesController):
+  
+actionpack (7.0.2.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.2.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.2.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/categories/new" for 127.0.0.1 at 2022-02-14 21:16:47 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 626)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:28
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 7384)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.2ms | Allocations: 7736)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-02-14 21:16:50 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 606)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:28
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 7351)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.1ms | Allocations: 7703)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-02-14 21:16:51 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 609)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:28
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 7354)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.1ms | Allocations: 7706)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-02-14 21:17:12 +0200
+Processing by CategoriesController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/categories_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 870)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:28
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | Allocations: 19598)
+Completed 200 OK in 52ms (Views: 40.9ms | ActiveRecord: 1.4ms | Allocations: 24103)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-02-14 21:17:16 +0200
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"test2"}, "commit"=>"Submit"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:9:in `create'
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test2"], ["created_at", "2022-02-14 19:17:16.335001"], ["updated_at", "2022-02-14 19:17:16.335001"]]
+  ↳ app/controllers/categories_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms | Allocations: 2527)
+
+
+Started GET "/" for 127.0.0.1 at 2022-02-14 21:17:16 +0200
+Processing by ImagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering images/index.html.erb within layouts/application
+  Rendered images/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 680)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:28
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 8086)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.2ms | Allocations: 9181)
+
+
+Started GET "/img/img1.jpeg" for 127.0.0.1 at 2022-02-14 21:17:16 +0200
+Started GET "/img/img2.jpeg" for 127.0.0.1 at 2022-02-14 21:17:16 +0200
+Started GET "/img/img4.jpeg" for 127.0.0.1 at 2022-02-14 21:17:16 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/img2.jpeg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/img1.jpeg"):
+  
+Started GET "/img/img3.jpeg" for 127.0.0.1 at 2022-02-14 21:17:16 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/img3.jpeg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/img4.jpeg"):
+  
