@@ -1,20 +1,27 @@
 <div id="gallery">
-<h2>All Images</h2>
-
-<div class="col-md-3">
-  <div class="photo photo-type-line">
-    <a href="img/img1.jpeg" class="photo-hover" data-lightbox="my-images" data-title="lorem ipsum lol">
-    <div class="photo-info">
-      <div class="headline">Lorem Ipsum</div>
-      <div class="line"></div>
-      <div class="desc">Lorem ipsum deler sit amet</div>
-    </div> <!-- photo-info -->
-  <div class="mask"></div>
-    </a>
-      <div class="photo-img">
-      <img src="img/img1.jpeg">
-    </div> <!-- photo-img -->
-  </div> <!-- photo photo-type-line -->
-</div> <!-- /.column -->
+  <h2>All Images</h2>
+<% if @images.exist? %>
+  <% @images.each_slice(4) do |image| %>
+  <div class="row">
+    <% image.each do |image| %>
+      <div class="col-md-3">
+        <div class="photo photo-type-line">
+          <a href="<%= image.image_url() %>" class="photo-hover" data-lightbox="my-images" data-title="<%= image.image_title %>">
+            <div class="photo-info">
+              <div class="headline"><%= image.image_title %></div>
+              <div class="line"></div>
+              <div class="desc"><%= image.image_description %></div>
+            </div> <!-- photo-info -->
+            <div class="mask"></div>
+          </a>
+            <div class="photo-img">
+              <%= image_tag image.image_url(:thumb) %>
+            </div> <!-- photo-img -->
+        </div> <!-- photo photo-type-line -->
+      </div> <!-- /.column -->
+    <% end %>
+  </div>
+  <% end %>
+<% end %>
 
 </div> <!-- /.gallery -->

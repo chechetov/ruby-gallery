@@ -1315,3 +1315,162 @@ ActionController::RoutingError (No route matches [GET] "/img/img2.jpeg"):
   
   [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+Started GET "/images" for 127.0.0.1 at 2022-02-16 09:49:15 +0200
+Processing by ImagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/index.html.erb within layouts/application
+  Rendered images/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1316)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1405)
+Completed 500 Internal Server Error in 18ms (Allocations: 2556)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div id="gallery">
+<h2>All Images</h2>
+<% if @images.exist? %>
+  <% @images.each_slice(4) do |image| %>
+  <div class="row">
+    <% image.each do |image| %>
+      <div class="col-md-3">
+        <div class="photo photo-type-line">
+          <a href="<%= image.image_url %>" class="photo-hover" data-lightbox="my-images" data-title="<%= image.image_title %>">
+            <div class="photo-info">
+              <div class="headline"><%= image.image_title %></div>
+              <div class="line"></div>
+              <div class="desc"><%= image.image_description %></div>
+            </div> <!-- photo-info -->
+            <div class="mask"></div>
+          </a>
+            <div class="photo-img">
+              <%= image_tag image.image_url(:thumb) %>
+            </div> <!-- photo-img -->
+        </div> <!-- photo photo-type-line -->
+      </div> <!-- /.column -->
+    <% end %>
+  </div>
+<% end %>
+
+</div> <!-- /.gallery -->
+):
+1:    <div id="gallery">
+2:    <h2>All Images</h2>
+3:    <% if @images.exist? %>
+4:      <% @images.each_slice(4) do |image| %>
+5:      <div class="row">
+6:        <% image.each do |image| %>
+7:          <div class="col-md-3">
+8:            <div class="photo photo-type-line">
+9:              <a href="<%= image.image_url %>" class="photo-hover" data-lightbox="my-images" data-title="<%= image.image_title %>">
+10:                <div class="photo-info">
+11:                  <div class="headline"><%= image.image_title %></div>
+12:                  <div class="line"></div>
+13:                  <div class="desc"><%= image.image_description %></div>
+14:                </div> <!-- photo-info -->
+15:                <div class="mask"></div>
+16:              </a>
+17:                <div class="photo-img">
+18:                  <%= image_tag image.image_url(:thumb) %>
+19:                </div> <!-- photo-img -->
+20:            </div> <!-- photo photo-type-line -->
+21:          </div> <!-- /.column -->
+22:        <% end %>
+23:      </div>
+24:    <% end %>
+25:    
+26:    </div> <!-- /.gallery -->
+  
+app/views/images/index.html.erb:28: syntax error, unexpected end-of-input, expecting `end'
+app/views/images/index.html.erb:28: syntax error, unexpected end-of-input, expecting `end'
+app/views/images/index.html.erb:28: syntax error, unexpected end-of-input, expecting `end'
+app/views/images/index.html.erb:28: syntax error, unexpected end-of-input, expecting `end'
+app/views/images/index.html.erb:28: syntax error, unexpected end-of-input, expecting `end'
+app/views/images/index.html.erb:28: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/images" for 127.0.0.1 at 2022-02-16 09:51:18 +0200
+Processing by ImagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/index.html.erb within layouts/application
+  Rendered images/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1301)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1390)
+Completed 500 Internal Server Error in 6ms (Allocations: 2534)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div id="gallery">
+<h2>All Images</h2>
+<% if @images.exist? %>
+  <% @images.each_slice(4) do |image| %>
+  <div class="row">
+    <% image.each do |image| %>
+      <div class="col-md-3">
+        <div class="photo photo-type-line">
+          <a href="<%= image.image_url() %>" class="photo-hover" data-lightbox="my-images" data-title="<%= image.image_title %>">
+            <div class="photo-info">
+              <div class="headline"><%= image.image_title %></div>
+              <div class="line"></div>
+              <div class="desc"><%= image.image_description %></div>
+            </div> <!-- photo-info -->
+            <div class="mask"></div>
+          </a>
+            <div class="photo-img">
+              <%= image_tag image.image_url(:thumb) %>
+            </div> <!-- photo-img -->
+        </div> <!-- photo photo-type-line -->
+      </div> <!-- /.column -->
+    <% end %>
+  </div>
+<% end %>
+
+</div> <!-- /.gallery -->
+):
+1:    <div id="gallery">
+2:    <h2>All Images</h2>
+3:    <% if @images.exist? %>
+4:      <% @images.each_slice(4) do |image| %>
+5:      <div class="row">
+6:        <% image.each do |image| %>
+7:          <div class="col-md-3">
+8:            <div class="photo photo-type-line">
+9:              <a href="<%= image.image_url() %>" class="photo-hover" data-lightbox="my-images" data-title="<%= image.image_title %>">
+10:                <div class="photo-info">
+11:                  <div class="headline"><%= image.image_title %></div>
+12:                  <div class="line"></div>
+13:                  <div class="desc"><%= image.image_description %></div>
+14:                </div> <!-- photo-info -->
+15:                <div class="mask"></div>
+16:              </a>
+17:                <div class="photo-img">
+18:                  <%= image_tag image.image_url(:thumb) %>
+19:                </div> <!-- photo-img -->
+20:            </div> <!-- photo photo-type-line -->
+21:          </div> <!-- /.column -->
+22:        <% end %>
+23:      </div>
+24:    <% end %>
+25:    
+26:    </div> <!-- /.gallery -->
+  
+app/views/images/index.html.erb:28: syntax error, unexpected end-of-input, expecting `end'
+app/views/images/index.html.erb:28: syntax error, unexpected end-of-input, expecting `end'
+app/views/images/index.html.erb:28: syntax error, unexpected end-of-input, expecting `end'
+app/views/images/index.html.erb:28: syntax error, unexpected end-of-input, expecting `end'
+app/views/images/index.html.erb:28: syntax error, unexpected end-of-input, expecting `end'
+app/views/images/index.html.erb:28: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/images" for 127.0.0.1 at 2022-02-16 09:54:38 +0200
+Processing by ImagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/index.html.erb within layouts/application
+  Rendered images/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1770)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1858)
+Completed 500 Internal Server Error in 8ms (Allocations: 3003)
+
+
+  
+ActionView::Template::Error (undefined method `exist?' for nil:NilClass):
+    1: <div id="gallery">
+    2:   <h2>All Images</h2>
+    3: <% if @images.exist? %>
+    4:   <% @images.each_slice(4) do |image| %>
+    5:   <div class="row">
+    6:     <% image.each do |image| %>
+  
+app/views/images/index.html.erb:3
