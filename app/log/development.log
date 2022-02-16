@@ -1244,3 +1244,74 @@ Processing by ImagesController#new as HTML
 Completed 200 OK in 59ms (Views: 55.3ms | ActiveRecord: 0.2ms | Allocations: 22991)
 
 
+Started GET "/upload" for 127.0.0.1 at 2022-02-15 22:49:29 +0200
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ImagesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/images/new.html.erb:21:in `collect'
+  Rendered images/new.html.erb within layouts/application (Duration: 34.8ms | Allocations: 8680)
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:28
+  Rendered layout layouts/application.html.erb (Duration: 3364.0ms | Allocations: 67470)
+Completed 200 OK in 3485ms (Views: 3368.4ms | ActiveRecord: 2.4ms | Allocations: 87749)
+
+
+Started POST "/images" for 127.0.0.1 at 2022-02-15 22:50:18 +0200
+Processing by ImagesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "image"=>{"image_title"=>"test title", "category_id"=>"1", "image_description"=>"test description", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007febafd51338 @tempfile=#<Tempfile:/var/folders/dh/fj10wyg95dvfl21_sszvbqz40000gp/T/RackMultipart20220215-97565-igbajb.jpg>, @original_filename="fortune-cookies.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"fortune-cookies.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 4390)
+
+
+  
+NoMethodError (undefined method `resize_to_limit' for #<ImageUploader::Uploader26300:0x00007febb0c667b0 @model=#<Image id: nil, image: nil, image_title: nil, image_file_size: nil, image_content_type: nil, image_description: nil, category_id: nil, created_at: nil, updated_at: nil>, @mounted_as=:image, @staged=true, @file=#<CarrierWave::SanitizedFile:0x00007febb0c57af8 @file="/Users/me/Documents/ruby/gallery/app/tmp/1644958218-116000605749597-0001-3011/thumb/fortune-cookies.jpg", @original_filename=nil, @content_type="image/jpeg", @content=nil>, @filename="fortune-cookies.jpg", @cache_id="1644958218-116000605749597-0001-3011", @identifier=nil, @versions=nil, @versions_to_cache=nil, @versions_to_store=nil, @parent_version=#<ImageUploader:0x00007febafd30610 @model=#<Image id: nil, image: nil, image_title: nil, image_file_size: nil, image_content_type: nil, image_description: nil, category_id: nil, created_at: nil, updated_at: nil>, @mounted_as=:image, @staged=true, @file=#<CarrierWave::SanitizedFile:0x00007febafd1f0b8 @file="/Users/me/Documents/ruby/gallery/app/public/uploads/tmp/1644958218-116000605749597-0001-3011/fortune-cookies.jpg", @original_filename="fortune-cookies.jpg", @content_type="image/jpeg", @content=nil>, @filename="fortune-cookies.jpg", @cache_id="1644958218-116000605749597-0001-3011", @identifier=nil, @versions={:thumb=>#<ImageUploader::Uploader26300:0x00007febb0c667b0 ...>}, @versions_to_cache=nil, @versions_to_store=nil, @original_filename="fortune-cookies.jpg", @cache_storage=#<CarrierWave::Storage::File:0x00007febafd1d588 @uploader=#<ImageUploader:0x00007febafd30610 ...>, @cache_called=nil>>, @parent_cache_id="1644958218-116000605749597-0001-3011", @original_filename="fortune-cookies.jpg">):
+  
+app/controllers/images_controller.rb:7:in `create'
+Started POST "/images" for 127.0.0.1 at 2022-02-15 22:54:22 +0200
+Processing by ImagesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "image"=>{"image_title"=>"test title", "category_id"=>"1", "image_description"=>"test description", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007febac2965e0 @tempfile=#<Tempfile:/var/folders/dh/fj10wyg95dvfl21_sszvbqz40000gp/T/RackMultipart20220215-97565-jr8ick.jpg>, @original_filename="sf-atompicture.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image[image]\"; filename=\"sf-atompicture.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/images_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mImage Create (2.3ms)[0m  [1m[32mINSERT INTO "images" ("image", "image_title", "image_file_size", "image_content_type", "image_description", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["image", "sf-atompicture.jpg"], ["image_title", "test title"], ["image_file_size", "88660"], ["image_content_type", "image/jpeg"], ["image_description", "test description"], ["category_id", 1], ["created_at", "2022-02-15 20:54:24.202996"], ["updated_at", "2022-02-15 20:54:24.202996"]]
+  ↳ app/controllers/images_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/images_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/images
+Completed 302 Found in 1148ms (ActiveRecord: 5.2ms | Allocations: 25609)
+
+
+Started GET "/images" for 127.0.0.1 at 2022-02-15 22:54:24 +0200
+Processing by ImagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering images/index.html.erb within layouts/application
+  Rendered images/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 676)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/layouts/application.html.erb:28
+  Rendered layout layouts/application.html.erb (Duration: 63.6ms | Allocations: 19864)
+Completed 200 OK in 70ms (Views: 67.9ms | ActiveRecord: 0.3ms | Allocations: 20813)
+
+
+Started GET "/img/img1.jpeg" for 127.0.0.1 at 2022-02-15 22:54:24 +0200
+Started GET "/img/img3.jpeg" for 127.0.0.1 at 2022-02-15 22:54:24 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/img1.jpeg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/img3.jpeg"):
+  
+Started GET "/img/img4.jpeg" for 127.0.0.1 at 2022-02-15 22:54:24 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/img4.jpeg"):
+  
+Started GET "/img/img2.jpeg" for 127.0.0.1 at 2022-02-15 22:54:24 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/img2.jpeg"):
+  
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
