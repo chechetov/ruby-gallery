@@ -1,6 +1,6 @@
 <div id="gallery">
   <h2>All Images</h2>
-<% if @images.exist? %>
+<% if @images.exists? %>
   <% @images.each_slice(4) do |image| %>
   <div class="row">
     <% image.each do |image| %>
@@ -22,6 +22,7 @@
     <% end %>
   </div>
   <% end %>
+  <% else %>
+  <p> There are no images </p>
 <% end %>
-
 </div> <!-- /.gallery -->
