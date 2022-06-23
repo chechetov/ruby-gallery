@@ -5,5 +5,5 @@ pin "@hotwired/turbo-rails", to: "turbo.min.js", preload: true
 pin "@hotwired/stimulus", to: "stimulus.min.js", preload: true
 pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
 pin_all_from "app/javascript/controllers", under: "controllers"
-pin "lightbox", to: "lightbox.js", preload: true
-pin "jquery", to: "jquery-1.11.1.min.js", preload: true
+pin "lightbox", to: "app/assets/javascript/lightbox.js", preload: true
+pin "jquery", to: "app/assets/javascriptjquery-1.11.1.min.js", preload: true
