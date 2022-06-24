@@ -1,2 +1,11 @@
 <h1>Categories#destroy</h1>
-<p>Find me in app/views/categories/destroy.html.erb</p>
+<p>Find fdfd me in app/views/categories/destroy.html.erb</p>
+<p> Hello </p>
+
+# Show categories
+<% if @categories.exists? %>
+<p> Hi </p>
+	<% @categories.each do |category| %>
+	<p> Category - id: <%= category.id %> name: <%= category.name %> </p>
+	<% end %>
+<% end %>

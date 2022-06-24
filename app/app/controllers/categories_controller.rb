@@ -17,15 +17,18 @@ class CategoriesController < ApplicationController
   end
 
   def edit
+    @categories = Category.all
   end
 
   def update
   end
 
   def destroy
+    @categories = Category.all
   end
 
   def show
+    @categories = Category.all
   end
 
   private
