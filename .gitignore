@@ -1,4 +1,5 @@
-app/log/production.log
-app/public/
-app/tmp/
+.DS_Store
+app/log
+app/public
+app/tmp
 
